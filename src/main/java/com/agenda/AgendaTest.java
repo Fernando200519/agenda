@@ -1,15 +1,16 @@
 package com.agenda;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;           
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class AgendaTest {
 
     @Test
     public void testAgregarTarea() {
         Agenda miAgenda = new Agenda();
-        String tareaDePrueba = "Comprar pan";
+        String tareaDePrueba = "Comprar pan ";
 
         miAgenda.agregarTarea(tareaDePrueba);
 
