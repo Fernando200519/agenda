@@ -1,0 +1,27 @@
+name: Java CI Agenda UV
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      USER_NAME: "Jose Fernando"
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Compilar y Probar
+      run: |
+        echo "Iniciando pruebas de la agenda de $USER_NAME"
+        mvn compile test
