@@ -9,7 +9,7 @@ public class App {
         Scanner entrada = new Scanner(System.in);
         int opcion = 0;
 
-        System.out.println("--- ORGANIZADOR DE TAREAS ---");
+        System.out.println("\n--- ORGANIZADOR DE TAREAS ---");
 
         do {
             System.out.println("\n1. Agregar una nueva tarea");
@@ -63,9 +63,9 @@ public class App {
                         try {
                             AgendaTest pruebasAuto = new AgendaTest();
                             pruebasAuto.testAgregarTarea();
-                            System.out.println("✅ Resultado: El sistema de tareas es estable.");
+                            System.out.println("Resultado: El sistema de tareas es estable.");
                         } catch (Throwable e) {
-                            System.out.println("❌ Resultado: El diagnóstico detectó un fallo.");
+                            System.out.println("Resultado: El diagnóstico detectó un fallo.");
                             System.out.println("Motivo: " + e.getMessage());
                         }
                         break;
